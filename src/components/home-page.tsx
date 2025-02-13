@@ -101,7 +101,7 @@ function HomePage() {
                             </span>
                         </div>
 
-                        <div className="flex justify-between items-center">
+                        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-1 sm:space-x-2">
                             <TaskFilters />
                             <button
                                 onClick={handleCompleteAll}

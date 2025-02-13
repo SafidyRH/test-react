@@ -1,17 +1,17 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, ChangeEvent, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTask } from '../store/task-slice';
+import { addTask } from '../controller/task-slice.ts';
 import toast from 'react-hot-toast';
 
 export const useAddTask = () => {
     const [title, setTitle] = useState('');
     const dispatch = useDispatch();
 
-    const handleTitleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleTitleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
     }, []);
 
-    const handleSubmit = useCallback((e: React.FormEvent) => {
+    const handleSubmit = useCallback((e: FormEvent) => {
         e.preventDefault();
         if (!title.trim()) {
             toast.error('Please enter a task title');

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTask, toggleTask } from '../store/task-slice';
+import { deleteTask, toggleTask } from '../controller/task-slice.ts';
 import toast from 'react-hot-toast';
 import { Task } from '../types/task';
 

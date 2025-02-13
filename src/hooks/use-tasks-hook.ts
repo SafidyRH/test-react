@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../store/store';
-import { fetchTasks, completeAllTasks } from '../store/task-slice';
+import { fetchTasks, completeAllTasks } from '../controller/task-slice.ts';
 import { useInView } from 'react-intersection-observer';
 
 export const useTasks = () => {

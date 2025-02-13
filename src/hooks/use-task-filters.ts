@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter, resetPage, fetchTasks } from '../store/task-slice';
+import { setFilter, resetPage, fetchTasks } from '../controller/task-slice.ts';
 import type { RootState, AppDispatch } from '../store/store';
 
 export const useTaskFilters = () => {
